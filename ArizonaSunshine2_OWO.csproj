@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <BaseOutputPath>bin\</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OWO" Version="2.3.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\MelonLoader\net6\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppClient">
+      <HintPath>F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\MelonLoader\Il2CppAssemblies\Il2CppClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppSerializableTO">
+      <HintPath>F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\MelonLoader\Il2CppAssemblies\Il2CppSerializableTO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppShared">
+      <HintPath>F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\MelonLoader\Il2CppAssemblies\Il2CppShared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppVertigo.Core">
+      <HintPath>F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\MelonLoader\Il2CppAssemblies\Il2CppVertigo.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\MelonLoader\net6\MelonLoader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="XCOPY &quot;$(SolutionDir)OWO&quot; &quot;$(TargetDir)\OWO\&quot; /Y /S&#xD;&#xA;XCOPY &quot;$(TargetDir)ArizonaSunshine2_OWO.dll&quot; &quot;F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\Mods\&quot; /Y&#xD;&#xA;XCOPY &quot;$(TargetDir)OWO.dll&quot; &quot;F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\UserLibs\&quot; /Y&#xD;&#xA;XCOPY &quot;$(TargetDir)OWO&quot; &quot;F:\SteamLibrary\steamapps\common\Arizona Sunshine 2\Mods\OWO\&quot; /Y /S" />
+  </Target>
+
+</Project>
