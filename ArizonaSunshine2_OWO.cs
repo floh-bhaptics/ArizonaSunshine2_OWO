@@ -9,7 +9,7 @@ using Il2CppVertigo.Interactables;
 using Il2CppVertigo.ECS;
 using Il2CppVertigo;
 
-[assembly: MelonInfo(typeof(ArizonaSunshine2_OWO.ArizonaSunshine2_OWO), "ArizonaSunshine2_OWO", "0.7", "Florian Fahrenberger")]
+[assembly: MelonInfo(typeof(ArizonaSunshine2_OWO.ArizonaSunshine2_OWO), "ArizonaSunshine2_OWO", "1.0.0", "Florian Fahrenberger")]
 [assembly: MelonGame("Vertigo Games", "ArizonaSunshine2")]
 
 

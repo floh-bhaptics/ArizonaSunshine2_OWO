@@ -35,9 +35,8 @@ namespace MyBhapticsTactsuit
             LOG("Initializing suit");
 
             // New auth.
-            //var gameAuth = GameAuth.Create(AllBakedSensations()).WithId("96224796");
-            var gameAuth = GameAuth.Create(AllBakedSensations());
-
+            var gameAuth = GameAuth.Create(AllBakedSensations()).WithId("79724427");
+            
             OWO.Configure(gameAuth);
             string[] myIPs = getIPsFromFile("OWO_Manual_IP.txt");
             if (myIPs.Length == 0) await OWO.AutoConnect();
