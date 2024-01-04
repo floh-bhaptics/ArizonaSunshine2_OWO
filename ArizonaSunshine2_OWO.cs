@@ -9,7 +9,7 @@ using Il2CppVertigo.Interactables;
 using Il2CppVertigo.ECS;
 using Il2CppVertigo;
 
-[assembly: MelonInfo(typeof(ArizonaSunshine2_OWO.ArizonaSunshine2_OWO), "ArizonaSunshine2_OWO", "1.0.0", "Florian Fahrenberger")]
+[assembly: MelonInfo(typeof(ArizonaSunshine2_OWO.ArizonaSunshine2_OWO), "ArizonaSunshine2_OWO", "1.0.1", "Florian Fahrenberger")]
 [assembly: MelonGame("Vertigo Games", "ArizonaSunshine2")]
 
 
@@ -82,10 +82,12 @@ namespace ArizonaSunshine2_OWO
                 {
                     tactsuitVr.PlayBackFeedback("ThreeHeartBeats");
                 }
+                /*
                 if (__instance.HealthValue > 0f)
                 {
                     if (__instance.HealthValue < __instance.MaxHealth * 0.25f && __instance.HealthValue > 0) tactsuitVr.PlayBackFeedback("ThreeHeartBeats");
                 }
+                */
                 Vector3 hitPosition = hitOrigin.Value;
                 Vector3 playerPosition = __instance.transformModule.HeadPosition;
                 Quaternion playerRotation = __instance.transformModule.ChestRotation;
